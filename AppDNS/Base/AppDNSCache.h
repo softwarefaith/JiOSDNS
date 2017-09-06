@@ -22,7 +22,7 @@
 
 - (NSArray *)ipFromCache:(NSString*)host;
 
-- (void)saveIPToCache:(NSArray *)ip withHost:(NSString*)host;
+- (void)saveIPToCache:(NSString *)ip withHost:(NSString*)host;
 
 ///ip is nil -》delete all ips
 - (void)delHost:(NSString *)host withIP:(NSString*)ip;

@@ -15,7 +15,6 @@ NSString * const kDefaultAppDNSLocation = @"AppDNSPList";
 
 @property (nonatomic, strong) NSMutableDictionary   *dnsMap;
 
-
 @end
 
 @implementation AppDNSCache
@@ -89,6 +88,50 @@ NSString * const kDefaultAppDNSLocation = @"AppDNSPList";
     return ips;
 }
 
+- (void)saveIPToCache:(NSString *)ip withHost:(NSString *)host {
+    @synchronized(self) {
+        
+        if (self.dnsMap) {
+            //find from file dnstable
+            
+            NSArray *ips =  [self ipFromCache:host];
+            
+            
+            BOOL isEx = [ips containsObject:ip];
+
+            if (isEx) {
+                return;
+            }
+            NSMutableString *string = [NSMutableString stringWithString:[self ipsStringFromCache:host]];
+            [string appendFormat:@";%@",ip];
+            [self.dnsMap setObject:host forKey:string];
+            [self saveToDocument:self.dnsMap];
+            return;
+        }
+    }
+}
+
+#pragma mark - private
+- (NSString *)ipsStringFromCache:(NSString *)host {
+    __block NSString *ipString ;
+    
+    @synchronized(self) {
+        
+        [self.dnsMap enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            
+            if ([key isEqualToString:host]) {
+                
+                if ([obj isKindOfClass:[NSString class]]) {
+                    ipString = (NSString *)obj;
+                    *stop = YES;
+                }
+            }
+        }];
+    }
+    return ipString;
+   
+
+}
 
 
 @end
