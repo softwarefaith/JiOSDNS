@@ -16,4 +16,14 @@
 
 //DNS解析功能
 
++ (void)asynParseHost: (NSString *)host complete: (void(^)(NSString * ip))complete;
+
++ (NSString *)synParseHost: (NSString *)host;
+
+
+//本地获取  先 6  后 4
++ (NSString *)getIpAddressFromHostName: (NSString *)host;
++ (NSString *)getIpv4AddressFromHost: (NSString *)host;
++ (NSString *)getIpv6AddressFromHost: (NSString *)host;
+
 @end

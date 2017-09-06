@@ -13,6 +13,9 @@ const static NSString *kAppDNSPodURL = @"http://119.29.29.29/d?dn=";
 
 @implementation AppDNSParser
 
+
+
+
 + (NSArray*) ipSynParseWithHost:(NSString*)host {
     if (!([host length] > 0)) {
         return nil;
@@ -60,7 +63,7 @@ const static NSString *kAppDNSPodURL = @"http://119.29.29.29/d?dn=";
         
         if (hostCallback) {
             
-             NSString *ip = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            NSString *ip = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
             NSArray *separatedArray = [ip componentsSeparatedByString:@","];
             NSArray *ips = [[separatedArray firstObject] componentsSeparatedByString:@";"];
             hostCallback(ips,([separatedArray count] > 1?[separatedArray lastObject]:0),error);

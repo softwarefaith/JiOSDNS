@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D9C68ADB4B582DA641A16AD8686A037C52DF5350",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D9C68ADB4B582DA641A16AD8686A037C52DF5350" : 9223372036854775807,
+    "46867EED237BAA9AB186953B5DC45AB2F32749E0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "33BBCF9E-DB6A-4AFF-B4F3-2446D830BA9A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D9C68ADB4B582DA641A16AD8686A037C52DF5350" : "JiOSDNS\/",
+    "46867EED237BAA9AB186953B5DC45AB2F32749E0" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JiOSDNS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JiOSDNS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/softwarefaith\/iOSAppKit",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "46867EED237BAA9AB186953B5DC45AB2F32749E0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:softwarefaith\/JiOSDNS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D9C68ADB4B582DA641A16AD8686A037C52DF5350"
+    }
+  ]
+}

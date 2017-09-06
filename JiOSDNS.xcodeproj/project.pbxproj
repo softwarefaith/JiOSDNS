@@ -12,6 +12,8 @@
 		2E6721DB1F5F997600A2B77C /* AppDNSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6721DA1F5F997600A2B77C /* AppDNSParser.m */; };
 		2E6721DE1F5FA78E00A2B77C /* AppDNSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6721DD1F5FA78E00A2B77C /* AppDNSCache.m */; };
 		2E6721E01F5FA92B00A2B77C /* AppDNSPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E6721DF1F5FA92A00A2B77C /* AppDNSPList.plist */; };
+		2E6721E31F5FCC4F00A2B77C /* NSString+AppValidIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6721E21F5FCC4F00A2B77C /* NSString+AppValidIP.m */; };
+		2E6721EA1F5FD43E00A2B77C /* AppDNSFilterRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6721E91F5FD43E00A2B77C /* AppDNSFilterRule.m */; };
 		2ED0156B1F5E9A460067F611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED0156A1F5E9A460067F611 /* main.m */; };
 		2ED0156E1F5E9A460067F611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED0156D1F5E9A460067F611 /* AppDelegate.m */; };
 		2ED015711F5E9A460067F611 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED015701F5E9A460067F611 /* ViewController.m */; };
@@ -49,6 +51,10 @@
 		2E6721DC1F5FA78E00A2B77C /* AppDNSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDNSCache.h; path = Base/AppDNSCache.h; sourceTree = "<group>"; };
 		2E6721DD1F5FA78E00A2B77C /* AppDNSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDNSCache.m; path = Base/AppDNSCache.m; sourceTree = "<group>"; };
 		2E6721DF1F5FA92A00A2B77C /* AppDNSPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppDNSPList.plist; path = Base/AppDNSPList.plist; sourceTree = "<group>"; };
+		2E6721E11F5FCC4F00A2B77C /* NSString+AppValidIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+AppValidIP.h"; path = "util/NSString+AppValidIP.h"; sourceTree = "<group>"; };
+		2E6721E21F5FCC4F00A2B77C /* NSString+AppValidIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+AppValidIP.m"; path = "util/NSString+AppValidIP.m"; sourceTree = "<group>"; };
+		2E6721E81F5FD43E00A2B77C /* AppDNSFilterRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDNSFilterRule.h; path = Base/AppDNSFilterRule.h; sourceTree = "<group>"; };
+		2E6721E91F5FD43E00A2B77C /* AppDNSFilterRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDNSFilterRule.m; path = Base/AppDNSFilterRule.m; sourceTree = "<group>"; };
 		2ED015661F5E9A460067F611 /* JiOSDNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiOSDNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED0156A1F5E9A460067F611 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ED0156C1F5E9A460067F611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 			children = (
 				2E6721D21F5F967800A2B77C /*  Base */,
 				2E6721D11F5F966900A2B77C /* Interceptor */,
+				2E6721E41F5FCC5400A2B77C /* util */,
 			);
 			path = AppDNS;
 			sourceTree = "<group>";
@@ -115,6 +122,8 @@
 			children = (
 				2E6721D31F5F96B400A2B77C /* AppDNSMapper.h */,
 				2E6721D41F5F96B400A2B77C /* AppDNSMapper.m */,
+				2E6721E81F5FD43E00A2B77C /* AppDNSFilterRule.h */,
+				2E6721E91F5FD43E00A2B77C /* AppDNSFilterRule.m */,
 				2E6721D91F5F997600A2B77C /* AppDNSParser.h */,
 				2E6721DA1F5F997600A2B77C /* AppDNSParser.m */,
 				2E6721DC1F5FA78E00A2B77C /* AppDNSCache.h */,
@@ -122,6 +131,15 @@
 				2E6721DF1F5FA92A00A2B77C /* AppDNSPList.plist */,
 			);
 			name = " Base";
+			sourceTree = "<group>";
+		};
+		2E6721E41F5FCC5400A2B77C /* util */ = {
+			isa = PBXGroup;
+			children = (
+				2E6721E11F5FCC4F00A2B77C /* NSString+AppValidIP.h */,
+				2E6721E21F5FCC4F00A2B77C /* NSString+AppValidIP.m */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 		2ED0155D1F5E9A460067F611 = {
@@ -326,7 +344,9 @@
 				2ED015711F5E9A460067F611 /* ViewController.m in Sources */,
 				2ED0156E1F5E9A460067F611 /* AppDelegate.m in Sources */,
 				2E6721D81F5F96BF00A2B77C /* AppDNSInterceptor.m in Sources */,
+				2E6721E31F5FCC4F00A2B77C /* NSString+AppValidIP.m in Sources */,
 				2E6721D51F5F96B400A2B77C /* AppDNSMapper.m in Sources */,
+				2E6721EA1F5FD43E00A2B77C /* AppDNSFilterRule.m in Sources */,
 				2ED0156B1F5E9A460067F611 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

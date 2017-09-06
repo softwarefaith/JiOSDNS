@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 #import "AppDNSParser.h"
-
+#import "NSString+AppValidIP.h"
 @interface ViewController ()
 
 @end
@@ -28,17 +28,7 @@
     //2.www.baidu.com  :  61.135.169.125;61.135.169.121   没有ttl
    NSArray *ips =  [AppDNSParser ipSynParseWithHost:@"www.baidu.com"];
     
-   NSLog(@"解析 ip = %@ ",ips);
-    
-    
-    NSString *iptemp = @"111.206.186.244;111.206.186.245,23";
-    NSArray *arr = [iptemp componentsSeparatedByString:@","];
-    NSArray *arrs = [[arr firstObject] componentsSeparatedByString:@";"];
-
-    NSLog(@"解析 ips = %@ ",arrs);
-    
-    
-
+   NSLog(@"解析 ip = %d ",[@"www.baidu.com" validHost] );
     
 }
 
