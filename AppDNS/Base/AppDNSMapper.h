@@ -21,7 +21,7 @@
 + (NSString *)synParseHost: (NSString *)host;
 
 
-//本地获取  先 6  后 4
+//通过手机方式 - 本地获取  先 6  后 4
 + (NSString *)getIpAddressFromHostName: (NSString *)host;
 + (NSString *)getIpv4AddressFromHost: (NSString *)host;
 + (NSString *)getIpv6AddressFromHost: (NSString *)host;

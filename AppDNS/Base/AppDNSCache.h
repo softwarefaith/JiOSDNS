@@ -10,7 +10,9 @@
 
 /*
     缓存到plist文件
-    其中格式为:    "host" : [ip1, ip2]
+    其中格式为:    "host" : ip1;ip2;ip3
+ 如果有ttl:    "host" : ip1;ip2;ip3,ttl
+
     AppDNSPList 为打包默认 DNS 映射
  */
 
