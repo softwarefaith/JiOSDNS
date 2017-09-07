@@ -26,4 +26,8 @@
 + (NSString *)getIpv4AddressFromHost: (NSString *)host;
 + (NSString *)getIpv6AddressFromHost: (NSString *)host;
 
+//通过系统CFHostRef方式获取  添加libresolv
++ (NSString *)fetchIPFromHost:(NSString *)host;
+
+
 @end

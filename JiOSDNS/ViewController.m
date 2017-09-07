@@ -10,6 +10,9 @@
 
 #import "AppDNSParser.h"
 #import "NSString+AppValidIP.h"
+
+#import "AppDNSMapper.h"
+
 @interface ViewController ()
 
 @end
@@ -26,9 +29,12 @@
     
     //1.解析 www.163.com&ttl=1  //111.206.186.244;111.206.186.245,23  其中23是ttl缓存时间
     //2.www.baidu.com  :  61.135.169.125;61.135.169.121   没有ttl
-   NSArray *ips =  [AppDNSParser ipSynParseWithHost:@"www.baidu.com"];
+ //  NSArray *ips =  [AppDNSParser ipSynParseWithHost:@"www.baidu.com"];
     
-   NSLog(@"解析 ip = %d ",[@"www.baidu.com" validHost] );
+    NSString * ip = [AppDNSMapper fetchIPFromHost:@"www.baid.com"];
+   NSLog(@"解析 ip = %@ ",ip );
+    
+   
     
 }
 

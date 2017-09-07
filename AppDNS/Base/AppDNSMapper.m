@@ -15,6 +15,14 @@
 #import <sys/types.h>
 #import <sys/socket.h>
 
+#import <resolv.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+//#include <sys/types.h>
+#include <sys/socket.h>
+#include <ifaddrs.h>
+#include <net/if.h>
+
 @implementation AppDNSMapper
 
 + (void)asynParseHost: (NSString *)host complete: (void(^)(NSString * ip))complete {
@@ -107,6 +115,51 @@
     dispatch_semaphore_wait(semaphore, dispatch_time(DISPATCH_TIME_NOW, 1.5 * NSEC_PER_SEC));
     [queue cancelAllOperations];
     return phost;
+}
+
++ (NSString *)fetchIPFromHost:(NSString *)host {
+    if (![host validHost]) {
+        return nil;
+    }
+    Boolean result,bResolved;
+    CFHostRef hostRef;
+    CFArrayRef addresses = NULL;
+    
+    CFStringRef hostNameRef = CFStringCreateWithCString(kCFAllocatorDefault, "www.bai.com", kCFStringEncodingASCII);
+    
+    hostRef = CFHostCreateWithName(kCFAllocatorDefault, hostNameRef);
+    if (hostRef) {
+        result = CFHostStartInfoResolution(hostRef, kCFHostAddresses, NULL);
+        if (result == TRUE) {
+            addresses = CFHostGetAddressing(hostRef, &result);
+        }
+    }
+    bResolved = result == TRUE ? true : false;
+    
+    char ip[16];
+    if(bResolved)
+    {
+        struct sockaddr_in* remoteAddr;
+        for(int i = 0; i < CFArrayGetCount(addresses); i++)
+        {
+            CFDataRef saData = (CFDataRef)CFArrayGetValueAtIndex(addresses, i);
+            remoteAddr = (struct sockaddr_in*)CFDataGetBytePtr(saData);
+            
+            if(remoteAddr != NULL)
+            {
+                //获取IP地址
+                //char ip[16];
+                strcpy(ip, inet_ntoa(remoteAddr->sin_addr));
+                
+                
+            }
+        }
+    }
+    CFRelease(hostNameRef);
+    CFRelease(hostRef);
+    return [NSString stringWithFormat:@"%s",ip];
+;
+    
 }
 
 

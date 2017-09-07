@@ -27,4 +27,5 @@ typedef void(^AppDNSParserCallback)(NSArray *ips,id extra,NSError *error);
 + (NSArray *) ipSynParseWithHost:(NSString*)host;
 ///asyn get ip
 + (void)ipAsynParseWithHost:(NSString*)host withComplete:(AppDNSParserCallback)hostCallback;
+
 @end
