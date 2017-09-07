@@ -12,6 +12,7 @@
 #import "NSString+AppValidIP.h"
 
 #import "AppDNSMapper.h"
+#import "IpManage.h"
 
 @interface ViewController ()
 
@@ -34,8 +35,11 @@
     NSString * ip = [AppDNSMapper fetchIPFromHost:@"www.baid.com"];
    NSLog(@"解析 ip = %@ ",ip );
     
-   
-    
+    IpManage *ips = [IpManage getInstance];
+    [ips init:@[@"111.206.186.244",@"61.135.169.121"].mutableCopy];
+    [ips execute];
+    NSLog(@"解析 ipqqqqqqq---- = %@ ",ips.state);
+
 }
 
 
