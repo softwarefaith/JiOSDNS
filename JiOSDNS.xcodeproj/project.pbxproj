@@ -17,6 +17,8 @@
 		2E6721F31F5FE67100A2B77C /* GBPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6721ED1F5FE67100A2B77C /* GBPing.m */; };
 		2E6721F41F5FE67100A2B77C /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6721EF1F5FE67100A2B77C /* GBPingSummary.m */; };
 		2E6721F51F5FE67100A2B77C /* IpManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6721F21F5FE67100A2B77C /* IpManage.m */; };
+		2E92CF341F6290D2002F5FC5 /* NSURLProtocol+WKWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92CF311F6290D2002F5FC5 /* NSURLProtocol+WKWebVIew.m */; };
+		2E92CF351F6290D2002F5FC5 /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92CF331F6290D2002F5FC5 /* HybridNSURLProtocol.m */; };
 		2ED0156B1F5E9A460067F611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED0156A1F5E9A460067F611 /* main.m */; };
 		2ED0156E1F5E9A460067F611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED0156D1F5E9A460067F611 /* AppDelegate.m */; };
 		2ED015711F5E9A460067F611 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED015701F5E9A460067F611 /* ViewController.m */; };
@@ -66,6 +68,10 @@
 		2E6721F01F5FE67100A2B77C /* ICMPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMPHeader.h; sourceTree = "<group>"; };
 		2E6721F11F5FE67100A2B77C /* IpManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpManage.h; sourceTree = "<group>"; };
 		2E6721F21F5FE67100A2B77C /* IpManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpManage.m; sourceTree = "<group>"; };
+		2E92CF301F6290D2002F5FC5 /* NSURLProtocol+WKWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WKWebVIew.h"; sourceTree = "<group>"; };
+		2E92CF311F6290D2002F5FC5 /* NSURLProtocol+WKWebVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WKWebVIew.m"; sourceTree = "<group>"; };
+		2E92CF321F6290D2002F5FC5 /* HybridNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridNSURLProtocol.h; sourceTree = "<group>"; };
+		2E92CF331F6290D2002F5FC5 /* HybridNSURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridNSURLProtocol.m; sourceTree = "<group>"; };
 		2ED015661F5E9A460067F611 /* JiOSDNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiOSDNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED0156A1F5E9A460067F611 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ED0156C1F5E9A460067F611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,6 +133,10 @@
 			children = (
 				2E6721D61F5F96BF00A2B77C /* AppDNSInterceptor.h */,
 				2E6721D71F5F96BF00A2B77C /* AppDNSInterceptor.m */,
+				2E92CF301F6290D2002F5FC5 /* NSURLProtocol+WKWebVIew.h */,
+				2E92CF311F6290D2002F5FC5 /* NSURLProtocol+WKWebVIew.m */,
+				2E92CF321F6290D2002F5FC5 /* HybridNSURLProtocol.h */,
+				2E92CF331F6290D2002F5FC5 /* HybridNSURLProtocol.m */,
 			);
 			name = Interceptor;
 			sourceTree = "<group>";
@@ -381,8 +391,10 @@
 				2E6721DE1F5FA78E00A2B77C /* AppDNSCache.m in Sources */,
 				2ED015711F5E9A460067F611 /* ViewController.m in Sources */,
 				2ED0156E1F5E9A460067F611 /* AppDelegate.m in Sources */,
+				2E92CF341F6290D2002F5FC5 /* NSURLProtocol+WKWebVIew.m in Sources */,
 				2E6721D81F5F96BF00A2B77C /* AppDNSInterceptor.m in Sources */,
 				2E6721F41F5FE67100A2B77C /* GBPingSummary.m in Sources */,
+				2E92CF351F6290D2002F5FC5 /* HybridNSURLProtocol.m in Sources */,
 				2E6721E31F5FCC4F00A2B77C /* NSString+AppValidIP.m in Sources */,
 				2E6721D51F5F96B400A2B77C /* AppDNSMapper.m in Sources */,
 				2E6721EA1F5FD43E00A2B77C /* AppDNSFilterRule.m in Sources */,

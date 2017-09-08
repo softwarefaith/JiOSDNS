@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AppDNSInterceptor : NSObject
+@interface AppDNSInterceptor : NSURLProtocol
+
++ (void)registerInterceptor;
+
++ (void)unregisterInterceptor;
 
 @end

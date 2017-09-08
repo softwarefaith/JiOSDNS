@@ -125,7 +125,7 @@
     CFHostRef hostRef;
     CFArrayRef addresses = NULL;
     
-    CFStringRef hostNameRef = CFStringCreateWithCString(kCFAllocatorDefault, "www.bai.com", kCFStringEncodingASCII);
+    CFStringRef hostNameRef = CFStringCreateWithCString(kCFAllocatorDefault, [host UTF8String], kCFStringEncodingASCII);
     
     hostRef = CFHostCreateWithName(kCFAllocatorDefault, hostNameRef);
     if (hostRef) {
