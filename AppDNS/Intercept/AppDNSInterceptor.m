@@ -161,7 +161,7 @@ IMP InterceptorReplaceMethod(SEL selector,
             mutableRequest.URL = [NSURL URLWithString:newUrl];
             [mutableRequest setValue:url.host forHTTPHeaderField:@"host"];
             // 添加originalUrl保存原始URL
-            [mutableReq addValue:originalUrl forHTTPHeaderField:@"originalUrl"];
+            [mutableRequest addValue:originalUrl forHTTPHeaderField:@"originalUrl"];
         }
     }
 
